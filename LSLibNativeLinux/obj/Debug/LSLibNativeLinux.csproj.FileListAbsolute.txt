@@ -1,0 +1,6 @@
+/home/pim/Data/lslib/LSLibNativeLinux/obj/Debug/LSLibNativeLinux.csproj.AssemblyReference.cache
+/home/pim/Data/lslib/LSLibNativeLinux/obj/Debug/LSLibNativeLinux.csproj.CoreCompileInputs.cache
+/home/pim/Data/lslib/LSLibNativeLinux/bin/Debug/LSLibNativeLinux.dll
+/home/pim/Data/lslib/LSLibNativeLinux/bin/Debug/LSLibNativeLinux.pdb
+/home/pim/Data/lslib/LSLibNativeLinux/obj/Debug/LSLibNativeLinux.dll
+/home/pim/Data/lslib/LSLibNativeLinux/obj/Debug/LSLibNativeLinux.pdb
