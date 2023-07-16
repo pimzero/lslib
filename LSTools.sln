@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpackGrid", "UnpackGrid\Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainFixup", "TerrainFixup\TerrainFixup.csproj", "{C3B44D0D-D7D8-4080-859B-90B391F8D5B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSLibNativeLinux", "LSLibNativeLinux\LSLibNativeLinux.csproj", "{C2464293-217D-4C11-A1BB-954FA5A00C74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -184,6 +186,18 @@ Global
 		{C3B44D0D-D7D8-4080-859B-90B391F8D5B1}.RelWithDebInfo|Any CPU.Build.0 = Release|Any CPU
 		{C3B44D0D-D7D8-4080-859B-90B391F8D5B1}.RelWithDebInfo|x64.ActiveCfg = Release|Any CPU
 		{C3B44D0D-D7D8-4080-859B-90B391F8D5B1}.RelWithDebInfo|x64.Build.0 = Release|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.Debug|x64.Build.0 = Debug|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.Release|x64.ActiveCfg = Release|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.Release|x64.Build.0 = Release|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.RelWithDebInfo|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.RelWithDebInfo|Any CPU.Build.0 = Debug|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.RelWithDebInfo|x64.ActiveCfg = Debug|Any CPU
+		{C2464293-217D-4C11-A1BB-954FA5A00C74}.RelWithDebInfo|x64.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
