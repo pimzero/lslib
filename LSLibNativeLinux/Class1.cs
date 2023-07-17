@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO.Hashing;
 
 namespace LSLib.Native
 {
@@ -7,7 +8,7 @@ public class Crc32
 	static UInt32[,] Crc32Lookup = new UInt32[8, 0x100];
 	static bool Crc32LookupTableInitialized = false;
 
-	void InitCrc32LookupTable() {
+	private static void InitCrc32LookupTable() {
 		if (Crc32LookupTableInitialized) return;
 
 
@@ -34,8 +35,48 @@ public class Crc32
 	}
 
 	public static UInt32 Compute(byte[] input, UInt32 previousCrc32) {
-		return 0xcafebabe;
+		var crc = new System.IO.Hashing.Crc32();
+
+		crc.Append(input);
+
+		return BitConverter.ToUInt32(crc.GetCurrentHash(), 0);
 	}
+	/*
+	public static UInt32 Compute(byte[] input, UInt32 previousCrc32) {
+		if (input.Length == 0)
+		{
+			return previousCrc32;
+		}
+
+		Int32 current = 0;
+		int length = input.Length;
+		UInt32 crc = ~previousCrc32;
+
+		InitCrc32LookupTable();
+
+		// process eight bytes at once
+		while (length >= 8)
+		{
+			UInt32 one = BitConverter.ToUInt32(input, current++) ^ crc;
+			UInt32 two = BitConverter.ToUInt32(input, current++);
+			crc = Crc32Lookup[7, one & 0xFF] ^
+				Crc32Lookup[6, (one >> 8) & 0xFF] ^
+				Crc32Lookup[5, (one >> 16) & 0xFF] ^
+				Crc32Lookup[4, one >> 24] ^
+				Crc32Lookup[3, two & 0xFF] ^
+				Crc32Lookup[2, (two >> 8) & 0xFF] ^
+				Crc32Lookup[1, (two >> 16) & 0xFF] ^
+				Crc32Lookup[0, two >> 24];
+			length -= 8;
+		}
+		Int32 currentChar = current * 4;
+		// remaining 1 to 7 bytes
+		while (length-- > 0)
+			crc = (crc >> 8) ^ Crc32Lookup[0, (crc & 0xFF) ^ input[currentChar++]];
+
+		return ~crc;
+	}
+	*/
 }
 
 public class LZ4FrameCompressor {
